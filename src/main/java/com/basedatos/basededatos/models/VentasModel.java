@@ -5,16 +5,16 @@ import jakarta.persistence.*;
 @Entity
 @Table(schema = "ventas")
 
-public class Ventas{
+public class VentasModel {
     @Id
     @Column(name = "id",updatable = false, nullable = false,  unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(name = "folio_producto")
-    private String folio_producto;
+    private int folio_producto;
 
     @Column(name = "venta_mes")
-    private String venta_mes;
+    private int venta_mes;
 
     @Column(name = "mes")
     private String mes;
@@ -27,19 +27,19 @@ public class Ventas{
         this.id = id;
     }
 
-    public String getFolio_producto() {
+    public int getFolio_producto() {
         return folio_producto;
     }
 
-    public void setFolio_producto(String folio_producto) {
+    public void setFolio_producto(int folio_producto) {
         this.folio_producto = folio_producto;
     }
 
-    public String getVenta_mes() {
+    public int getVenta_mes() {
         return venta_mes;
     }
 
-    public void setVenta_mes(String venta_mes) {
+    public void setVenta_mes(int venta_mes) {
         this.venta_mes = venta_mes;
     }
 
